@@ -1,0 +1,22 @@
+#button_sortalf{
+    display: none;
+}
+#display{
+    width: 50%;
+    border: 1px solid blue;
+    background-color: cornflowerblue;
+border-radius: 8px;
+padding : 10px;
+}
+
+#display1{
+    width: 50%;
+    border: 1px solid red;
+    background-color: orangered;
+border-radius: 8px;
+padding : 10px; 
+}
+
+input{
+    margin: 10px;
+}

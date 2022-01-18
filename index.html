@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Students in my class</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center>
+            <h1>list of Students in my class</h1>
+            <span>1</span><input id="s1" placeholder="Name of student" type="text">
+            <br>
+            <span>2</span><input id="s2" placeholder="Name of student" type="text">
+            <br>
+            <span>3</span><input id="s3" placeholder="Name of student" type="text">
+            <br>
+            <span>4</span><input id="s4" placeholder="Name of student" type="text">
+            <br>
+            <br>
+            <div id="display"></div>
+            <br>
+            <div id="display1"></div>
+            <br>
+            <button onclick="display()" id="button_sub">Submit</button>
+            <br>
+            <button onclick="sort_students()" id="button_sortalf">Sort</button>
+        </center>
+        
+    </body>
+    <script>
+        var snames=[];
+        var darray=[];
+function display()
+{
+    for(var x=1; x<=4; x++){
+        var n= document.getElementById("s"+x).value;
+        snames.push(n);
+        console.log(snames)
+    }
+    console.log(snames)
+    var l=snames.length;
+    for(var y=0; y<l; y++){
+        darray.push("<h4>NAME- "+snames[y]+"</h4>")
+        console.log(darray)
+    }
+
+    
+    document.getElementById("display").innerHTML=darray;
+    rc= darray.join (" ");
+    document.getElementById("display1").innerHTML=rc;
+    document.getElementById("button_sub").style.display="none";
+    document.getElementById("button_sortalf").style.display="inline";
+    
+}
+function sort_students(){
+    darray.sort();
+    document.getElementById("display").innerHTML=darray;
+    rc= darray.join (" ");
+    document.getElementById("display1").innerHTML=rc;
+}
+
+    </script>
+</html>
